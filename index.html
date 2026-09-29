@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>3D Street Racer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="game-wrapper">
+
+    <!-- HUD -->
+    <header class="hud">
+
+        <div class="hud-box">
+            <small>SCORE</small>
+            <strong id="score">0</strong>
+        </div>
+
+        <div class="hud-box">
+            <small>SPEED</small>
+            <strong><span id="speed">0</span> KM/H</strong>
+        </div>
+
+        <div class="hud-box">
+            <small>LIVES</small>
+            <strong id="lives">❤️❤️❤️</strong>
+        </div>
+
+    </header>
+
+
+    <!-- GAME -->
+    <main id="game">
+
+        <!-- SKY -->
+        <div class="sky">
+
+            <div class="sun"></div>
+
+            <div class="cloud cloud-one"></div>
+            <div class="cloud cloud-two"></div>
+
+            <div class="mountain mountain-one"></div>
+            <div class="mountain mountain-two"></div>
+
+        </div>
+
+
+        <!-- ROAD -->
+        <div class="road">
+
+            <div class="road-edge left-edge"></div>
+            <div class="road-edge right-edge"></div>
+
+            <div class="lane-line line-one"></div>
+            <div class="lane-line line-two"></div>
+
+
+            <!-- ROAD SIDE OBJECTS -->
+
+            <div class="road-object tree t1">🌲</div>
+            <div class="road-object tree t2">🌴</div>
+            <div class="road-object tree t3">🌲</div>
+            <div class="road-object tree t4">🌴</div>
+
+
+            <!-- ENEMY CAR 1 -->
+
+            <div class="enemy enemy-one">
+
+                <div class="enemy-car red-car">
+
+                    <div class="enemy-roof"></div>
+
+                    <div class="enemy-window front-window"></div>
+                    <div class="enemy-window back-window"></div>
+
+                    <div class="enemy-light light-left"></div>
+                    <div class="enemy-light light-right"></div>
+
+                    <div class="enemy-wheel wheel-one"></div>
+                    <div class="enemy-wheel wheel-two"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ENEMY CAR 2 -->
+
+            <div class="enemy enemy-two">
+
+                <div class="enemy-car yellow-car">
+
+                    <div class="enemy-roof"></div>
+
+                    <div class="enemy-window front-window"></div>
+                    <div class="enemy-window back-window"></div>
+
+                    <div class="enemy-light light-left"></div>
+                    <div class="enemy-light light-right"></div>
+
+                    <div class="enemy-wheel wheel-one"></div>
+                    <div class="enemy-wheel wheel-two"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ENEMY CAR 3 -->
+
+            <div class="enemy enemy-three">
+
+                <div class="enemy-car green-car">
+
+                    <div class="enemy-roof"></div>
+
+                    <div class="enemy-window front-window"></div>
+                    <div class="enemy-window back-window"></div>
+
+                    <div class="enemy-light light-left"></div>
+                    <div class="enemy-light light-right"></div>
+
+                    <div class="enemy-wheel wheel-one"></div>
+                    <div class="enemy-wheel wheel-two"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- COINS -->
+
+            <div class="coin coin-one">🪙</div>
+            <div class="coin coin-two">🪙</div>
+            <div class="coin coin-three">🪙</div>
+
+
+            <!-- PLAYER CAR -->
+
+            <div id="player">
+
+                <div class="player-car">
+
+                    <div class="player-roof"></div>
+
+                    <div class="player-window front-window"></div>
+                    <div class="player-window back-window"></div>
+
+                    <div class="headlight headlight-left"></div>
+                    <div class="headlight headlight-right"></div>
+
+                    <div class="player-wheel wheel-left"></div>
+                    <div class="player-wheel wheel-right"></div>
+
+                    <div class="spoiler"></div>
+
+                </div>
+
+                <div class="car-shadow"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- START SCREEN -->
+
+        <section id="start-screen" class="screen">
+
+            <h1>🏎️ STREET RACER</h1>
+
+            <p>3D Racing Challenge</p>
+
+            <button id="start-btn">
+                START RACE
+            </button>
+
+            <div class="help">
+                <p>⬅️ ➡️ Move your car</p>
+                <p>🪙 Collect coins</p>
+                <p>🚘 Avoid enemy cars</p>
+            </div>
+
+        </section>
+
+
+        <!-- COUNTDOWN -->
+
+        <div id="countdown"></div>
+
+
+        <!-- GAME OVER -->
+
+        <section id="game-over" class="screen hidden">
+
+            <h1>💥 CRASH!</h1>
+
+            <p>Final Score</p>
+
+            <div id="final-score">
+                0
+            </div>
+
+            <button id="restart-btn">
+                🔄 PLAY AGAIN
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- MOBILE CONTROLS -->
+
+    <nav class="mobile-controls">
+
+        <button id="left-btn">
+            ◀
+        </button>
+
+        <button id="pause-btn">
+            ⏸
+        </button>
+
+        <button id="right-btn">
+            ▶
+        </button>
+
+    </nav>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
